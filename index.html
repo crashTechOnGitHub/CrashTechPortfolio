@@ -1,0 +1,42 @@
+<div id="app">
+    <transition name="page" :duration="1300">
+        <div class="page" :is="page" @change-page="onChangePage"></div>
+    </transition>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script id="start" type="text/x-template">
+    <div class="start">
+        <div class="inner">
+            <h1 class="title enter-1">Page Transition Demo</h1>
+            <div class="button-wrapper enter-2">
+                <button class="button button-start" type="button" @click="$emit('change-page', 'next')"> <span class="button-text">CLICK HERE</span></button>
+            </div>
+        </div>
+    </div>
+</script>2
+<script id="next" type="text/x-template">
+    <div class="next">
+        <div class="inner">
+            <h1 class="title enter-1">You moved to next page ...</h1>
+            <ul class="next-list">
+                <li class="enter-2">&lt;transition&gt; built-in component of Vue.js</li>
+                <li class="enter-3">First demo transition </li>
+            </ul>
+            <div class="button-wrapper enter-4">
+                <button class="button button-next" type="button" @click="$emit('change-page', 'back')"><span class="button-text">Back</span></button>
+            </div>
+        </div>
+    </div>
+</script>
+<script id="back" type="text/x-template">
+    <div class="back">
+        <div class="inner">
+            <h1 class="title enter-5">3rd page</h1>
+            <div class="button-wrapper enter-6">
+                <button class="button button-start" type="button" @click="$emit('change-page', 'start')"> <span class="button-text">go to first</span></button>
+            </div>
+        </div>
+    </div>
+</script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="abc.js"></script>
