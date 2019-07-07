@@ -1,19 +1,19 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">        
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 </head>
 
 <body>
-    <div id="app">
-        <transition name="page" :duration="1500">
+    <div id="app">                 <!--SINGLE VUE INSTANCE-->
+        <transition name="page" :duration="1500">       <!--FOR TRANSITION ELEMENT-->
             <div class="page" :is="page" @change-page="slide"></div>
         </transition>
     </div>
 
 
-    <script id="start" type="text/x-template">
+    <script id="start" type="text/x-template">      <!--FIRST PAGE-->
         <div class="start">
             <div class="inner">
 
@@ -22,8 +22,8 @@
                     <div class="canvas">
                         <button class="footer" type="button" @click="$emit('change-page', 'next')">Decode CrashTech!</button>
                         <ul class="bullets">
-                            <li class="l1"><button class="button button-start" type="button" @click="$emit('change-page', 'start')"></button></li>
-                            <li class="l1"><button class="button button-next" type="button" @click="$emit('change-page', 'next')"></button></li>
+                            <li class="l1"><button class="button button-start" type="button" @click="$emit('change-page', 'start')"></button></li>  <!--FIRST BUTTON-->
+                            <li class="l1"><button class="button button-next" type="button" @click="$emit('change-page', 'next')"></button></li>    <!--SECOND BUTTON--> 
                         </ul>
 
 
@@ -32,7 +32,7 @@
             </div>
         </div>
     </script>
-    <script id="next" type="text/x-template">
+    <script id="next" type="text/x-template">   <!--SECOND PAGE-->
         <div class="next">
             <div class="inner">
                 <div class="canvas">
@@ -45,9 +45,9 @@
         </div>
     </script>
 
-    <script src="abc.js"></script>
+    <script src="abc.js"></script>      <!--LINKING OF JAVA SCRIPT FILE-->
     <ul class="bullets"></ul>
-    <img src="logo.png" alt="home" width="300" height="300">
+    
 </body>
 
 </html>
