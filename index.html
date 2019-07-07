@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <transition name="page" :duration="1500">
+            <div class="page" :is="page" @change-page="slide"></div>
+        </transition>
+    </div>
+
+
+    <script id="start" type="text/x-template">
+        <div class="start">
+            <div class="inner">
+                <div class="register">
+                    <button class="reg" type="button" @click="$emit('change-page','register')">Register</button>
+                </div>
+
+                <div class="button-wrapper enter-2">
+                    <div class="search-box">
+                        <input type="text" name="" class="search-txt" placeholder="Type to search" />
+                        <a class="search-btn" href="#"></a>
+                    </div>
+
+                    <div class="canvas">
+                        <button class="footer" type="button" @click="$emit('change-page', 'next')">Decode CrashTech!</button>
+                        <ul class="bullets">
+                            <li class="l1"><button class="button button-start" type="button" @click="$emit('change-page', 'start')"></button></li>
+                            <li class="l1"><button class="button button-next" type="button" @click="$emit('change-page', 'next')"></button></li>
+                        </ul>
+                        <div class="follow">
+                            <button class="but_fol">Follow Me</button>
+                            <button class="fol twi"><a href="https://twitter.com/heyAfsar"></a></button>
+                            <button class="fol link"><a href="https://twitter.com/heyAfsar"></a></button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="next" type="text/x-template">
+        <div class="next">
+            <div class="inner">
+                <div class="register">
+                    <button class="reg" type="button" @click="$emit('change-page','register')">Register</button>
+                </div>
+
+                <div class="canvas">
+                    <ul class="bullets">
+                        <li class="l1"><button class="button button-start" type="button" @click="$emit('change-page', 'start')"></button></li>
+                        <li class="l1"><button class="button button-next" type="button" @click="$emit('change-page', 'next')"></button></li>
+                    </ul>
+                    <div class="search-box">
+                        <input type="text" name="" class="search-txt" placeholder="Type to search" />
+                        <a class="search-btn" href="#"></a>
+                    </div>
+                    <div class="follow">
+                        <button class="but_fol">Follow Me</button>
+                        <button class="fol twi"><a href="https://twitter.com/heyAfsar"></a></button>
+                        <button class="fol link"><a href="https://twitter.com/heyAfsar"></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script src="abc.js"></script>
+    <ul class="bullets"></ul>
+    <img src="logo.png" alt="home" width="300" height="300">
+</body>
+
+</html>
