@@ -7,8 +7,8 @@
 <script>
 export default{
   name: 'forthP',
-  created(){
-  console.log(this.$route.query.title);
+  created () {
+    console.log(this.$route.query.title)
   }
 }
 </script>

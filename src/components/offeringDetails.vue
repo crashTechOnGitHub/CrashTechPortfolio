@@ -56,7 +56,7 @@ export default {
       this.$emit('close')
     },
     gotoRegister (title, e) {
-      this.$router.push({path: '/forth', query: { title: title}})
+      this.$router.push({path: '/forth', query: {title: title}})
     }
   }
 }
