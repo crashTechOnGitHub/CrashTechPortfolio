@@ -1,7 +1,7 @@
 <template>
-<div id="firstP">
+<div id="firstP" v-on:scroll="changepage" >
 <header>header</header>
-<p>This is first page
+<p v-on:keyup.enter="changepage">This is first page
 </p>
   <footer @click="changepage">
       <p> Decode CrashTech</p>
@@ -35,7 +35,7 @@ export default{
     'footery': footer
   }}
 </script>
-<style>
+<style scoped>
 #firstP
 {
 background-color:#a8e3f0;
@@ -45,7 +45,7 @@ width:100%;
 height:-webkit-fill-available;
 }
 footer{
-	background: #0dadad;
+background: #0dadad;
     height: 15%;
     width: -webkit-fill-available;
     margin-left: 0.5em;
