@@ -2,27 +2,27 @@
 <template>
 <nav>
 <ul>
-<li>
+<li class="lis">
 <router-link to="/" exact tag="li">
 <pre> </pre>
 </router-link>
 </li>
-<li>
+<li class="lis">
 <router-link to="/second" exact tag="li">
 <pre> </pre>
 </router-link>
 </li>
-<li>
+<li class="lis">
 <router-link to="/third" exact tag="li">
 <pre> </pre>
 </router-link>
 </li>
-<li>
+<li class="lis">
 <router-link to="/forth" exact tag="li">
 <pre> </pre>
 </router-link>
 </li>
-<li>
+<li class="lis">
 <router-link to="/fifth" exact tag="li">
 <pre> </pre>
 </router-link>
@@ -44,7 +44,7 @@ width: fit-content;
 position: fixed;
 top:25%;
 }
-li
+li.lis
 {
 list-style-type:circle;
 font-size: xx-large;
@@ -52,7 +52,7 @@ cursor: pointer;
 color: #eee;
 font-weight: 900;
 }
-li :hover
+li.lis :hover
 {
 color:#fff;
 }

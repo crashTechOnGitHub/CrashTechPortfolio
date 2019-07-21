@@ -9,7 +9,7 @@ export default{
   name: 'fifthP'
 }
 </script>
-<style>
+<style scoped>
 #fifthP
 {
 background-color:cyan;
