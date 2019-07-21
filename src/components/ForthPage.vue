@@ -6,10 +6,13 @@
 </template>
 <script>
 export default{
-  name: 'forthP'
+  name: 'forthP',
+  created(){
+  console.log(this.$route.query.title);
+  }
 }
 </script>
-<style>
+<style scoped>
 #forthP
 {
 background-color:orange;

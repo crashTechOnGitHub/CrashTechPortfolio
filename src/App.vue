@@ -31,6 +31,7 @@ export default {
     var that = this
     this.$router.beforeEach((to, from, next) => {
       that.transitionName = that.returnUpOrDown(that.returnPageNo(from.name), that.returnPageNo(to.name))
+      debugger
       next()
     })
   },
@@ -62,7 +63,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
